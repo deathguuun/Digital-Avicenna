@@ -1,0 +1,41 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(267.32deg, #65a3ff 0%, rgba(46, 106, 195, 0) 100%), #2e6ac4;
+	box-shadow: 0px 4px 14px 4px rgba(46, 106, 195, 0.58);
+	border-radius: 7px;
+	cursor: pointer;
+	transition: ease 1s linear;
+	color: #fff;
+	&--lg {
+		width: 268px;
+		height: 58px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		@include md-d {
+			width: 290px;
+		}
+	}
+	&--sm {
+		width: 80px;
+		height: 44px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	&:hover {
+		transition: ease 1s linear;
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+			linear-gradient(267.32deg, #65a3ff 0%, #2e6ac3 100%);
+		box-shadow: 0px 4px 14px 4px rgba(46, 106, 195, 0.58);
+	}
+	&:visited,
+	&:active {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+			linear-gradient(267.32deg, #65a3ff 0%, #2e6ac3 100%);
+		box-shadow: 0px 4px 14px 4px rgba(46, 106, 195, 0.58);
+	}
+}

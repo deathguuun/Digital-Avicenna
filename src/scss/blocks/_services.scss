@@ -1,0 +1,49 @@
+.services {
+	margin-top: 200px;
+	&__remark {
+		max-width: 689px;
+		color: #999ba5;
+		margin: 40px 0px 60px 0px;
+	}
+	&__content {
+		background: #fff;
+		border-radius: 7px;
+		margin-bottom: 20px;
+	}
+	&__wrapper {
+		padding: 40px 30px 40px 30px;
+		display: flex;
+		margin-bottom: 20px;
+	}
+	&__img {
+		text-align: center;
+		align-self: center;
+		img {
+		}
+	}
+	&__upline {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: 0.005em;
+		margin-bottom: 5px;
+	}
+
+	p {
+		position: relative;
+		display: inline-block;
+		margin-left: 30px;
+		margin-top: 15px;
+		margin-bottom: 0;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			background: url("/src/img/blue-line.png") no-repeat;
+			height: 5px;
+			width: 16px;
+			left: -30px;
+			top: 12px;
+		}
+	}
+}

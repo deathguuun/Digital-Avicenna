@@ -1,0 +1,37 @@
+.intro {
+	background: url("../img/background-bg.jpg") no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 198px 0px 193px 67px;
+		@include md-d {
+			padding: 121px 0px 71px 0px;
+		}
+	}
+	&__info {
+		@include adaptive-font(18, 16);
+		color: $remark;
+		max-width: 443px;
+		margin-top: 39px;
+		@include md-d {
+			margin-top: 20px;
+		}
+	}
+	&__remark {
+		@include adaptive-font(16, 12);
+		color: $remark;
+		margin-top: 45px;
+		@include md-d {
+			margin-top: 20px;
+		}
+	}
+	&__btn {
+		margin-top: 55px;
+		@include md-d {
+			align-self: center;
+			margin-top: 70px;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.benefits {
+	margin-top: 200px;
+	span {
+		color: #2e6ac4;
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	&__info {
+		display: flex;
+		margin-top: 70px;
+	}
+	&__img {
+		img {
+			min-width: 65px;
+			min-height: 55px;
+		}
+	}
+	&__wrapper {
+		margin-left: 30px;
+	}
+	&__upline {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 25px;
+		letter-spacing: 0.005em;
+	}
+	&__text {
+		margin-top: 25px;
+	}
+	&__btn {
+		align-self: center;
+		margin-top: 80px;
+	}
+}
