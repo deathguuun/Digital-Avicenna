@@ -1,3 +1,74 @@
-.questions {
+$acordeonWidth: 74px;
+
+.question {
 	margin-top: 100px;
+
+	&__acordeon {
+		margin-top: 70px;
+	}
+	&__container {
+		max-width: 790px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	&__title {
+		position: relative;
+		background-color: #ffffff;
+		color: #042b2d;
+		padding: 25px 0px 24px 67px;
+		border-radius: 7px;
+		text-align: left;
+		transition: 0.5s;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 25px;
+		color: #383838;
+		&.active {
+			color: #2e6ac3;
+		}
+	}
+	&__icon {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background: #fff;
+		right: 0px;
+		top: 37px;
+		transform: translate(-50%, -50%) rotate(0deg);
+
+		cursor: pointer;
+		z-index: 100;
+		transition: 0.2s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			display: block;
+			border-right: 3px solid #d8d8d8;
+			border-bottom: 3px solid #d8d8d8;
+			width: 17px;
+			height: 17px;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&.clicked {
+			transform: translate(-50%, -50%) rotate(360deg);
+			background: #fff;
+		}
+	}
+	&__content {
+		display: none;
+		padding: 0px 33px;
+		margin-bottom: 10px;
+		padding: 0px 100px 25px 67px;
+		padding-left: 67px;
+		padding-bottom: 25px;
+		overflow: hidden;
+		transition: 0.2s ease-out;
+		color: $h2-color;
+		font-size: 16px;
+		line-height: 28px;
+		background: #ffffff;
+	}
 }
