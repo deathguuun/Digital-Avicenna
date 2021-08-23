@@ -1,10 +1,20 @@
 .info {
-	padding: 81px 0px 0px 0px;
+	margin-top: 81px;
+	@include md-d {
+		margin-top: 70px;
+	}
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap-reverse;
+	}
+
 	&__title {
-		margin-top: 60px;
 	}
 	&__text {
 		margin-top: 51px;
+		@include md-d {
+			margin-top: 20px;
+		}
 		p {
 			letter-spacing: 0.005em;
 		}

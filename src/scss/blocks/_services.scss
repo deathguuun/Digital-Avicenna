@@ -1,9 +1,17 @@
 .services {
 	margin-top: 200px;
+	@include md-d {
+		margin-top: 70px;
+	}
 	&__remark {
 		max-width: 689px;
 		color: #999ba5;
-		margin: 40px 0px 60px 0px;
+		margin-top: 40px;
+		@include md-d {
+			font-size: 14px;
+			line-height: 22px;
+			margin-top: 25px;
+		}
 	}
 	&__content {
 		background: #fff;
@@ -18,8 +26,6 @@
 	&__img {
 		text-align: center;
 		align-self: center;
-		img {
-		}
 	}
 	&__upline {
 		font-weight: 500;

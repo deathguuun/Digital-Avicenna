@@ -2,6 +2,9 @@
 	background: #2e6ac3;
 	margin-top: 100px;
 	padding-top: 22px;
+	@include md-d {
+		margin-top: 70px;
+	}
 	&__container {
 		flex-wrap: nowrap;
 	}

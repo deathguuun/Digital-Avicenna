@@ -1,9 +1,19 @@
 .team {
+	margin-top: 200px;
+	@include md-d {
+		margin-top: 70px;
+	}
 	&__remark {
 		margin-top: 40px;
 		margin-bottom: 70px;
 		max-width: 538px;
 		color: #5e5e5e;
+		@include md-d {
+			margin-top: 25px;
+			margin-bottom: 25px;
+			font-size: 14px;
+			line-height: 22px;
+		}
 	}
 	&__wrapper {
 		&--second {

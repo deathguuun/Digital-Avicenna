@@ -1,5 +1,8 @@
 .benefits {
 	margin-top: 200px;
+	@include md-d {
+		margin-top: 70px;
+	}
 	span {
 		color: #2e6ac4;
 	}
@@ -10,27 +13,47 @@
 	&__info {
 		display: flex;
 		margin-top: 70px;
+		@include md-d {
+			margin-top: 32px;
+		}
 	}
 	&__img {
 		img {
 			min-width: 65px;
 			min-height: 55px;
+			@include md-d {
+				min-height: 45px;
+			}
 		}
 	}
 	&__wrapper {
 		margin-left: 30px;
+		@include md-d {
+			margin-left: 15;
+		}
 	}
 	&__upline {
 		font-weight: 600;
 		font-size: 20px;
 		line-height: 25px;
 		letter-spacing: 0.005em;
+		@include md-d {
+			font-size: 16px;
+		}
 	}
 	&__text {
 		margin-top: 25px;
+		@include md-d {
+			font-size: 14px;
+			line-height: 22px;
+			margin-top: 15px;
+		}
 	}
 	&__btn {
 		align-self: center;
 		margin-top: 80px;
+		@include md-d {
+			margin-top: 40px;
+		}
 	}
 }

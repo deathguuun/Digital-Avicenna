@@ -4,7 +4,7 @@ $(document).ready(function () {
 		var anchor = $(this);
 		$('html, body').stop().animate({
 			scrollTop: $(anchor.attr('href')).offset().top - 100
-		}, 800);
+		}, 100);
 		e.preventDefault();
 	});
 	return false;
@@ -44,6 +44,25 @@ $(".question__title").on("click", function () {
 			.siblings(".question__content")
 			.slideDown(200);
 	}
+});
+
+//SLIDER review
+$('.review__slider').slick({
+	infinite: true,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	dots: true,
+	responsive: [
+		{
+			breakpoint: 775,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: true,
+				arrows: false
+			}
+		},
+	],
 });
 
 

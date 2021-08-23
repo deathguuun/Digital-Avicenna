@@ -1,5 +1,8 @@
 .form {
 	margin-top: 200px;
+	@include md-d {
+		margin-top: 70px;
+	}
 	&__registration {
 		display: flex;
 		flex-direction: column;
@@ -14,10 +17,13 @@
 			line-height: 25px;
 			margin-top: 20px;
 			margin-bottom: 0;
+			@include md-d {
+				font-size: 16px;
+				line-height: 20px;
+			}
 		}
 		input {
 			margin-top: 10px;
-
 			display: flex;
 			width: 540px;
 			height: 74px;
@@ -29,6 +35,12 @@
 			line-height: 25px;
 			color: #b8b8b8;
 			padding-left: 30px;
+			@include md-d {
+				width: 290px;
+				height: 57px;
+				font-size: 14px;
+				line-height: 17px;
+			}
 		}
 	}
 	&__checkbox {
@@ -52,14 +64,13 @@
 	}
 	&__placeholder {
 		padding: 14px 0px 13px 10px;
-		// margin: 0 auto;
 		width: 100%;
 		align-self: center;
-		@include xl-d {
-			// width: 350px;
-		}
-		@include lg-d {
-			// width: 300px;
+	}
+	&__btn {
+		margin-top: 50px;
+		@include md-d {
+			margin-top: 30px;
 		}
 	}
 }

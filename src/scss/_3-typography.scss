@@ -23,10 +23,14 @@ h1 {
 
 h2 {
 	font-weight: bold;
-	font-size: 35px;
+	@include adaptive-font(35, 20);
 	line-height: 43px;
 	color: $h2-color;
 	margin-left: 30px;
+	@include md-d {
+		margin-left: 20px;
+		line-height: 25px;
+	}
 }
 .h2-title {
 	display: flex;
@@ -34,6 +38,15 @@ h2 {
 
 .blue-line {
 	margin-top: 3px;
+	@include md-d {
+		margin-top: -4px;
+	}
+	svg {
+		width: 65px;
+		@include md-d {
+			width: 41px;
+		}
+	}
 	svg path {
 		stroke: $accent;
 	}

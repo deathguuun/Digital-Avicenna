@@ -2,9 +2,15 @@ $acordeonWidth: 74px;
 
 .question {
 	margin-top: 100px;
+	@include md-d {
+		margin-top: 70px;
+	}
 
 	&__acordeon {
 		margin-top: 70px;
+		@include md-d {
+			margin-top: 30px;
+		}
 	}
 	&__container {
 		max-width: 790px;
@@ -23,6 +29,11 @@ $acordeonWidth: 74px;
 		font-size: 20px;
 		line-height: 25px;
 		color: #383838;
+		@include md-d {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 17px 50px 17px 25px;
+		}
 		&.active {
 			color: #2e6ac3;
 		}
@@ -35,10 +46,13 @@ $acordeonWidth: 74px;
 		right: 0px;
 		top: 37px;
 		transform: translate(-50%, -50%) rotate(0deg);
-
 		cursor: pointer;
 		z-index: 100;
 		transition: 0.2s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+		@include md-d {
+			right: -40px;
+			top: 40%;
+		}
 
 		&::before {
 			content: "";
@@ -70,5 +84,10 @@ $acordeonWidth: 74px;
 		font-size: 16px;
 		line-height: 28px;
 		background: #ffffff;
+		@include md-d {
+			font-size: 14px;
+			line-height: 22px;
+			padding: 0px 20px 17px 25px;
+		}
 	}
 }
