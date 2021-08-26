@@ -48,10 +48,12 @@ $(".question__title").on("click", function () {
 
 //SLIDER review
 $('.review__slider').slick({
-	infinite: true,
+	infinite: false,
 	slidesToShow: 3,
 	slidesToScroll: 1,
 	dots: true,
+	adaptiveHeight: true,
+	speed: 1000,
 	responsive: [
 		{
 			breakpoint: 775,
@@ -59,10 +61,45 @@ $('.review__slider').slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				dots: true,
-				arrows: false
+				arrows: false,
+				adaptiveHeight: true,
 			}
 		},
 	],
+});
+
+$('.services__contain').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	adaptiveHeight: true,
+	mobileFirst: true,
+	dots: true,
+	arrows: false,
+	responsive: [
+		{
+			breakpoint: 767,
+			settings: "unslick",
+			adaptiveHeight: true,
+
+		}
+	]
+});
+
+$('.team__wrapper').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	adaptiveHeight: true,
+	mobileFirst: true,
+	dots: true,
+	arrows: false,
+	responsive: [
+		{
+			breakpoint: 767,
+			settings: "unslick",
+			adaptiveHeight: true,
+
+		}
+	]
 });
 
 

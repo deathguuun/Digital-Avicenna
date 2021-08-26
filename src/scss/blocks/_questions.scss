@@ -51,7 +51,7 @@ $acordeonWidth: 74px;
 		z-index: 100;
 		transition: 0.2s cubic-bezier(0.2, 0.6, 0.3, 1.1);
 		@include md-d {
-			right: -40px;
+			right: -20px;
 			top: 40%;
 		}
 
