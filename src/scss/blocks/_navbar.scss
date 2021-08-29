@@ -198,7 +198,12 @@ $headerBurgerColor: #fafafa;
 				position: relative;
 				top: 20px;
 				left: 60%;
-				z-index: 4000;
+				@include sm-d {
+					left: 55%;
+				}
+				@include xs-d {
+					left: 50%;
+				}
 			}
 		}
 	}
