@@ -77,7 +77,7 @@ $('.services__contain').slick({
 	arrows: false,
 	responsive: [
 		{
-			breakpoint: 767,
+			breakpoint: 576,
 			settings: "unslick",
 			adaptiveHeight: true,
 
@@ -94,7 +94,7 @@ $('.team__wrapper').slick({
 	arrows: false,
 	responsive: [
 		{
-			breakpoint: 767,
+			breakpoint: 576,
 			settings: "unslick",
 			adaptiveHeight: true,
 

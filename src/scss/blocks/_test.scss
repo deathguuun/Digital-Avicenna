@@ -67,7 +67,7 @@
 	}
 	&__num {
 		visibility: hidden;
-		@include md-d {
+		@include sm-d {
 			visibility: visible;
 			font-weight: bold;
 			font-size: 25px;
