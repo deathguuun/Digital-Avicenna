@@ -9,6 +9,9 @@ $(window).on('resize', function (e) {
 				dots: true,
 				arrows: false,
 				adaptiveHeight: true,
+				fade: true,
+				cssEase: 'linear',
+
 			}).data({ 'init-slider': 1 });
 		}
 	}

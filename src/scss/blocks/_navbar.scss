@@ -132,7 +132,10 @@ $headerBurgerColor: #fafafa;
 			order: 2;
 			text-align: center;
 			border-bottom: 1px solid #ededed;
-			a {
+			a,
+			a:visited,
+			a:active,
+			a:focus {
 				color: #62677d;
 				font-weight: 500;
 				line-height: 22px;

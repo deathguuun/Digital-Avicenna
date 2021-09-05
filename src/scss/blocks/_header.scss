@@ -2,6 +2,9 @@
 	background: url("../img/background-bg.jpg") no-repeat;
 	background-size: cover;
 	background-position: bottom;
+	@include xxl {
+		background-position: top;
+	}
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
