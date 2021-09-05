@@ -22,6 +22,7 @@
 	&__card {
 		margin-top: 55px;
 		@include md-d {
+			user-select: none;
 			display: flex;
 			flex-direction: column;
 			margin: 0 auto;
@@ -46,7 +47,7 @@
 		span {
 			color: $accent;
 		}
-		@include sm {
+		@include md {
 			display: none;
 		}
 	}

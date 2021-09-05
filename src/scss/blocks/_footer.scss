@@ -111,6 +111,17 @@
 			margin-top: 40px;
 		}
 	}
+	&__lang {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		display: flex;
+		margin-top: 20px;
+	}
+
+	&__link {
+		margin-left: 20px;
+	}
 	&__icon {
 		margin-top: 29px;
 		display: flex;

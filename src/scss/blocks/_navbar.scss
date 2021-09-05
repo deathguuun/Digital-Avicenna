@@ -1,17 +1,7 @@
 $headerTextColor: rgba(0, 0, 0, 0.7);
 //ADAPTIVE header
 $headerBurgerColor: #fafafa;
-.lock {
-	overflow: hidden;
-	.intro {
-		filter: blur(10px);
-		transform: scale(1.04);
-	}
-	.header__logo {
-		z-index: 0;
-		filter: blur(7px);
-	}
-}
+
 .header {
 	position: absolute;
 	width: 100%;
@@ -33,8 +23,9 @@ $headerBurgerColor: #fafafa;
 		margin-top: 19px;
 		position: relative;
 		display: flex;
-
-		align-items: center;
+		align-items: flex-end;
+		justify-content: space-between;
+		flex: 1 1;
 		@include md-d {
 			justify-content: space-between;
 		}
@@ -47,25 +38,36 @@ $headerBurgerColor: #fafafa;
 		overflow: hidden;
 		position: relative;
 		z-index: 3;
-		flex: 0 0 200px;
+		flex: 1 0 200px;
+		margin-bottom: 5px;
+
+		@include xl-d {
+			flex: 0 0 180;
+		}
+		@include lg-d {
+			flex: 0 1 140px;
+		}
+		@include sm-d {
+			flex: 0 0 150px;
+		}
 	}
-	&__logo img {
-		flex: 1 1 220px;
-		display: block;
-	}
+
 	&__menu {
 		display: flex;
 	}
 
 	&__list {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		position: relative;
 		padding-top: 20px;
 		z-index: 2;
 		& li a {
 			font-weight: 600;
 			font-size: 14px;
+			@include lg-d {
+				font-size: 12px;
+			}
 			line-height: 17px;
 			color: #e0e0e0;
 			white-space: nowrap;
@@ -74,16 +76,99 @@ $headerBurgerColor: #fafafa;
 				color: $accent;
 			}
 		}
+		@include md-d {
+			order: 1;
+		}
 	}
 	&__link {
 		margin-left: 42px;
 		color: $headerTextColor;
 	}
 	&__btn {
-		z-index: 3;
+		padding-top: 12px;
 		margin-left: 74px;
-		&--active {
-			display: none;
+		z-index: 100;
+		position: relative;
+		@include xl-d {
+			margin-left: 22px;
+		}
+		@include lg-d {
+			margin-left: 22px;
+		}
+		@include md-d {
+			padding-top: 0;
+			margin-left: 0;
+			z-index: 1001;
+			left: 60%;
+			top: 20px;
+			order: 0;
+		}
+		@include sm-d {
+			left: 55%;
+		}
+		@include xs-d {
+			left: 50%;
+		}
+	}
+	&__translate {
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+
+		margin-bottom: 6px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		color: #e0e0e0;
+
+		&:hover {
+			transition: all 0.3s ease;
+			color: $accent;
+		}
+
+		@include md-d {
+			margin-top: 15px;
+			margin-right: 24%;
+			order: 2;
+			text-align: center;
+			border-bottom: 1px solid #ededed;
+			a {
+				color: #62677d;
+				font-weight: 500;
+				line-height: 22px;
+			}
+		}
+	}
+	&__lang {
+		display: flex;
+		align-items: flex-end;
+		margin-left: 37px;
+		justify-content: center;
+		@include lg-d {
+			margin-left: 18px;
+		}
+		@include md-d {
+			margin-bottom: 15px;
+		}
+		.header__link {
+			margin-left: 10px;
+		}
+	}
+	&__england {
+		margin-left: 15px;
+	}
+	&__icon {
+		order: 5;
+		display: none;
+
+		@include md-d {
+			display: flex;
+			justify-content: center;
+			margin-right: 24%;
+
+			svg {
+				margin-left: 25px;
+			}
 		}
 	}
 
@@ -93,9 +178,7 @@ $headerBurgerColor: #fafafa;
 				margin-top: 25px;
 				height: 40px;
 			}
-			&__logo {
-				flex: 0 0 124px;
-			}
+
 			&__burger {
 				display: block;
 				position: relative;
@@ -132,6 +215,11 @@ $headerBurgerColor: #fafafa;
 
 			&__burger.active {
 				right: 65%;
+				top: 28px;
+
+				@include xs-d {
+					right: 60%;
+				}
 			}
 			&__burger.active span {
 				transform: scale(0);
@@ -165,18 +253,21 @@ $headerBurgerColor: #fafafa;
 				left: 25%;
 				background: #fafafa;
 				overflow-x: hidden;
+				overflow: hidden;
 				border-radius: 7px 0px 0px 7px;
 			}
 			&__list {
-				margin-top: 87px;
-				height: 100%;
+				margin-top: 57px;
 				display: flex;
 				flex-direction: column;
+				@include md-d {
+					margin-top: 20px;
+				}
 			}
 			&__list li {
-				margin-right: 10%;
+				margin-right: 18%;
 				width: 100%;
-				padding: 15px 0px 15px 0px;
+				padding: 10px 0px 10px 0px;
 				border-top: 1px solid #ededed;
 				border-bottom: 1px solid #ededed;
 			}
@@ -189,20 +280,8 @@ $headerBurgerColor: #fafafa;
 			&__link {
 				margin-left: 0;
 				font-size: 30px;
-			}
-		}
-		&__btn {
-			display: none;
-			&--active {
-				display: block;
-				position: relative;
-				top: 20px;
-				left: 60%;
-				@include sm-d {
-					left: 55%;
-				}
-				@include xs-d {
-					left: 50%;
+				@include md-d {
+					font-size: 18px;
 				}
 			}
 		}
@@ -212,7 +291,7 @@ $headerBurgerColor: #fafafa;
 @include xl-d {
 	.header {
 		&__link {
-			margin-left: 25px;
+			margin-left: 19px;
 		}
 		&__contacts {
 			margin-left: 30px;
@@ -224,9 +303,7 @@ $headerBurgerColor: #fafafa;
 		&__body {
 			height: 70px;
 		}
-		&__logo {
-			flex: 0 0 179px;
-		}
+
 		&__link {
 			margin-left: 12px;
 		}
@@ -246,5 +323,20 @@ $headerBurgerColor: #fafafa;
 		&__body {
 			margin-top: 0;
 		}
+	}
+}
+
+.lock {
+	overflow: hidden;
+	.intro {
+		filter: blur(10px);
+		transform: scale(1.04);
+	}
+	.header__logo {
+		z-index: 0;
+		filter: blur(7px);
+	}
+	.header__body {
+		height: 0;
 	}
 }
