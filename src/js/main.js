@@ -1,58 +1,16 @@
-
-// ANCHOR slide
-$(document).ready(function () {
-	$('a[href^="#"]').bind("click", function (e) {
-		var anchor = $(this);
-		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top - 20
-		}, 100);
-		e.preventDefault();
-	});
-	return false;
+// Anchor Slide
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
 
 
 
-
-
-
-// Scroll active
-
-// $(window).scroll(function () {
-//     var scrollDistance = $(window).scrollTop();
-
-//     $('section').each(function (i) {
-//         if ($(this).position().top - 51 <= scrollDistance) {
-//             $('a[href*="#"]:not([href="#"]).active').removeClass('active');
-//             $('a').eq(i).addClass('active');
-//         }
-//     });
-
-// }).scroll();
-
-//Scroll to anchor
-
-// $(function () {
-// 	$('a[href*="#"]:not([href="#"])').click(function () {
-//        Если не использовать scroll active
-
-// $('a').each(function () {
-// 	$(this).removeClass('active');
-// })
-// $(this).addClass('active');
-// 		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-// 			var target = $(this.hash);
-// 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-// 			if (target.length) {
-// 				$('html, body').animate({
-// 					scrollTop: target.offset().top - 50
-// 				}, 500);
-// 				return false;
-// 			}
-// 		}
-// 	});
-// });
 
 
 //Header BURGER
